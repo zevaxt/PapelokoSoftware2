@@ -47,5 +47,7 @@ Contributor(s):
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.show_sql">true</property>
     <mapping resource="pkgModelo/Usuarios.hbm.xml"/>
+    <mapping/>
+    <mapping resource="pkgModelo/Proveedores.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
