@@ -17,17 +17,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import pkgModelo.GestionUsuario;
 
-
 /**
- * Esta Clase se encarga de la comunicación entre los controladores y la gestion de Ususarios en al Modelo
- * @author Eduar Ortega
- * @version 13/03/2017
+ *
+ * @author EDUARD
  */
-
-/*
-Permite establecer una coneccion con el controlador
-*/
-
 @WebServlet(name = "LogicaUsuarios", urlPatterns
         = {
             "/LogicaUsuarios"
@@ -61,7 +54,7 @@ public class LogicaUsuarios extends HttpServlet {
                
                 this.Usuario.ingresarUsuario(Integer.parseInt( request.getParameter("Id") ), request.getParameter("Nombre"), request.getParameter("Apellido"),
                                         request.getParameter("Rol"), request.getParameter("Credencial"));
-                
+            //response.getWriter().print(this.Usuario.getUsuariosID(1));*/
                 response.getWriter().print("Exito");
             } 
             catch (Exception e) {
@@ -69,6 +62,7 @@ public class LogicaUsuarios extends HttpServlet {
             }
             
 
+            //Logger.getLogger(ControladorUsuario.class.getName()).log(Level.SEVERE, null, ex);
 
         }
         else if( Operacion.equals("Actualizar") ){
